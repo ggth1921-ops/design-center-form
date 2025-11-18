@@ -1,0 +1,20 @@
+<form id="jobForm">
+  <input name="name" placeholder="ชื่อผู้ขอ" />
+  <input name="jobType" placeholder="ประเภทงาน" />
+  <textarea name="detail"></textarea>
+  <input name="date" type="date" />
+  <button type="submit">ส่งงาน</button>
+</form>
+
+<script>
+document.getElementById("jobForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(this));
+
+  fetch("https://script.google.com/macros/s/AKfycbwZGA5mIN8waqQ1VdgpgUDReBDhae38RyQTIQqb8xaRsSC05QZgA8s8D-x7qvWN1hrp/exec", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+});
+</script>
