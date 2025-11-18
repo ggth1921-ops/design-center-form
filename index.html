@@ -1,4 +1,3 @@
-<!-- update -->
 <form id="jobForm">
   <input name="name" placeholder="ชื่อผู้ขอ" />
   <input name="jobType" placeholder="ประเภทงาน" />
@@ -10,14 +9,16 @@
 <script>
 document.getElementById("jobForm").addEventListener("submit", function(e){
   e.preventDefault();
+
   const data = Object.fromEntries(new FormData(this));
 
-  fetch("https://script.google.com/macros/s/AKfycbx5jRy2ClSFZHSLpv5BoSv-Q67cVX7goAWJOvk37i-9Y7ilMoS3QZf3ggvC21UUigcY/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbwZi2VDEEl9W9q9ebmw8XSU_L3OP-lPv-LWGsZFMsTUlBHzzbpFgejb9fAsS3ymrE1/exec", {
     method: "POST",
+    mode: "no-cors",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
   });
+
+  alert("ส่งข้อมูลเรียบร้อย!");
 });
 </script>
-
-
