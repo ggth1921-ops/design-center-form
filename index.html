@@ -12,11 +12,12 @@ document.getElementById("jobForm").addEventListener("submit", function(e){
   e.preventDefault();
   const data = Object.fromEntries(new FormData(this));
 
-  fetch("https://script.google.com/macros/s/AKfycbwZGA5mIN8waqQ1VdgpgUDReBDhae38RyQTIQqb8xaRsSC05QZgA8s8D-x7qvWN1hrp/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbx5jRy2ClSFZHSLpv5BoSv-Q67cVX7goAWJOvk37i-9Y7ilMoS3QZf3ggvC21UUigcY/exec", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
   });
 });
 </script>
+
 
