@@ -12,13 +12,13 @@ document.getElementById("jobForm").addEventListener("submit", function(e){
 
   const data = Object.fromEntries(new FormData(this));
 
-  fetch("https://script.google.com/macros/s/AKfycbwZi2VDEEl9W9q9ebmw8XSU_L3OP-lPv-LWGsZFMsTUlBHzzbpFgejb9fAsS3ymrE1/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbzDQQgxw3u80rzDLHxolGrLAMl_YBB7s7o3NWXe8m2K60WknlPgeQonBJE7Bu6fKzgY/exec", {
     method: "POST",
     mode: "no-cors",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
   });
 
-  alert("ส่งข้อมูลเรียบร้อย!");
+  alert("ส่งข้อมูลแล้ว!");
 });
 </script>
